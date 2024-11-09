@@ -13,3 +13,6 @@ runs:
   main: "index.js"
 permissions:
   pull-requests: write
+branding:
+  icon: 'zap'
+  color: 'blue'
