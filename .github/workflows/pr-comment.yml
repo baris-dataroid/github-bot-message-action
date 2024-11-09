@@ -4,7 +4,7 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write  # PR'lara yorum yazmak için izin verir
+  pull-requests: write
 
 jobs:
   comment-on-pr:
@@ -17,4 +17,4 @@ jobs:
         uses: ./
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          message: "Merhaba! Bu bir bot mesajıdır"
+          message: "Merhaba! Bu bir bot mesajıdır 🎉"
