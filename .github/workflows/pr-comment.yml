@@ -1,0 +1,20 @@
+name: "Add Comment on PR"
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  comment-on-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Add PR comment
+        uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          message: "Merhaba! Bu bir bot mesajıdır 🎉"
