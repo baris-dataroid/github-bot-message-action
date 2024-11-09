@@ -1,0 +1,15 @@
+name: "Add Comment to PR"
+description: "Adds a bot comment to a Pull Request."
+inputs:
+  github-token:
+    description: "GitHub token to authenticate."
+    required: true
+    default: "${{ github.token }}"
+outputs:
+  comment-id:
+    description: "ID of the created comment"
+runs:
+  using: "node16"
+  main: "index.js"
+permissions:
+  pull-requests: write
